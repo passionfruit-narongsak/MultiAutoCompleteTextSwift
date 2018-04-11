@@ -152,7 +152,7 @@ open class MultiAutoCompleteTextField:UITextField {
         
     }
     
-    func textFieldDidChange(){
+    @objc func textFieldDidChange(){
         guard let _ = text else {
             return
         }
@@ -164,7 +164,7 @@ open class MultiAutoCompleteTextField:UITextField {
         })
     }
     
-    func textFieldDidEndEditing() {
+    @objc func textFieldDidEndEditing() {
         autoCompleteTableView?.isHidden = true
     }
 }
